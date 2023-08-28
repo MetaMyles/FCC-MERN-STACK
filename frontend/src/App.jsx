@@ -1,10 +1,16 @@
 import { Container } from 'react-bootstrap';
-import HomeScreen from './screens/HomeScreen';
+import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 
-
 const App = () => {
-  return (<><Header /><Container className='my-2'><HomeScreen /></Container></>);
+  return (
+    <>
+      <Header />
+      <Container className='my-2'>
+        <Outlet />
+      </Container>
+    </>
+  );
 };
 
 export default App;
